@@ -49,10 +49,35 @@ final class Overfold: NSObject {
             self?.clickedElsewhere()
         }
 
-        if !arranged, SMAppService.mainApp.status != .enabled {
+        apply(arranged ? .none : .everything)
+        if !arranged {
+            // Let the status items settle so the guide's lines are already on screen.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { Self.showGuide() }
+        }
+    }
+
+    /// First launch: explain the lines, and offer to open at login.
+    private static func showGuide() {
+        let alert = NSAlert()
+        alert.messageText = "Arrange your menu bar"
+        alert.informativeText = """
+            Hold ⌘ and drag icons around the two lines next to the arrow.
+
+            Right of grey: always shown.
+            Grey to blue: shown when you click the arrow.
+            Left of blue: shown when you ⌥-click it.
+
+            Click the arrow when you're done. ⌥-click it to see the lines again.
+            """
+        alert.addButton(withTitle: "OK")
+        alert.showsSuppressionButton = true
+        alert.suppressionButton?.title = "Open Overfold at login"
+        alert.suppressionButton?.state = .on
+        NSApp.activate()
+        alert.runModal()
+        if alert.suppressionButton?.state == .on {
             try? SMAppService.mainApp.register()
         }
-        apply(arranged ? .none : .everything)
     }
 
     // MARK: Actions

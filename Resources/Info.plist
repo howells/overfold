@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleExecutable</key>
 	<string>Overfold</string>
+	<key>CFBundleIconFile</key>
+	<string>Overfold</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.howells.overfold</string>
 	<key>CFBundleName</key>
@@ -18,5 +20,7 @@
 	<string>14.0</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2026 Daniel Howells</string>
 </dict>
 </plist>
