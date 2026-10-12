@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@source "../public";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+
+  --color-ink: #0a0b0e;
+  --color-mac-blue: #0a84ff;
+
+  /* Type roles: display, title, lead, body, small, bar. */
+  --text-display: 3.75rem;
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -0.035em;
+  --text-display-sm: 2.625rem;
+  --text-display-sm--line-height: 1.04;
+  --text-display-sm--letter-spacing: -0.03em;
+  --text-title: 1.75rem;
+  --text-title--line-height: 1.15;
+  --text-title--letter-spacing: -0.02em;
+  --text-lead: 1.1875rem;
+  --text-lead--line-height: 1.5;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.55;
+  --text-small: 0.8125rem;
+  --text-small--line-height: 1.4;
+  --text-bar: 0.8125rem;
+  --text-bar--line-height: 1;
+
+  --radius-screen: 1.25rem;
+  --radius-control: 0.75rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-ink);
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-mac-blue) 45%, transparent);
+  }
+}
+
+/* Dusk wallpaper behind the demo menu bar. */
+.wallpaper {
+  background:
+    radial-gradient(60% 80% at 18% 110%, #ff9a5a 0%, transparent 60%),
+    radial-gradient(55% 75% at 85% 105%, #d1477e 0%, transparent 62%),
+    radial-gradient(70% 70% at 55% -10%, #3047a8 0%, transparent 70%),
+    linear-gradient(180deg, #141c44 0%, #2a1f52 55%, #5a2c5e 100%);
+}
+
+/* A menu bar section that folds open by animating its grid track. */
+.fold {
+  display: grid;
+  grid-template-columns: 0fr;
+  transition: grid-template-columns 420ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.fold > div {
+  overflow: hidden;
+  min-width: 0;
+}
+.fold[data-open] {
+  grid-template-columns: 1fr;
+}
+
+.line {
+  width: 0;
+  height: 16px;
+  border-radius: 1px;
+  opacity: 0;
+  transition: opacity 200ms ease, width 420ms cubic-bezier(0.32, 0.72, 0, 1), margin 420ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+[data-reveal="everything"] .line {
+  width: 2px;
+  margin-inline: 7px;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fold,
+  .line {
+    transition: none;
+  }
+}
