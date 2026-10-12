@@ -6,7 +6,7 @@ Requires macOS 14 or later.
 
 ## Install
 
-Download the latest `Overfold-<version>.dmg` from [Releases](https://github.com/howells/overfold/releases), open it and drag Overfold to Applications.
+Download the latest `Overfold-<version>.dmg` from [overfold.danielhowells.com](https://overfold.danielhowells.com) or [Releases](https://github.com/howells/overfold/releases), open it and drag Overfold to Applications.
 
 ## Use
 
@@ -28,3 +28,7 @@ Overfold needs no permissions.
 ```
 
 `release.sh` needs a Developer ID Application certificate and a `notarytool` keychain profile named `overfold`.
+
+## Site
+
+`site/` is the page at overfold.danielhowells.com, deployed to Vercel (project `overfold`, team `danielhowells`). From `site/`: `vercel build --prod && vercel deploy --prebuilt --prod`.
