@@ -7,12 +7,15 @@
   <meta name="description" content="Overfold hides the menu bar icons you don't need and brings them back with a click. Free, open source, no permissions.">
   <meta property="og:title" content="Overfold">
   <meta property="og:description" content="Hide the menu bar icons you don't need. Free for macOS.">
-  <meta name="theme-color" content="#0a0b0e">
+  <meta name="theme-color" content="#f3efe6">
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap">
   <link rel="stylesheet" href="/app.css">
 </head>
-<body class="min-h-dvh bg-ink font-sans text-body text-white">
+<body class="min-h-dvh font-serif text-body text-ink">
   <svg width="0" height="0" class="absolute" aria-hidden="true">
     <defs>
       <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
@@ -34,110 +37,121 @@
     </defs>
   </svg>
 
-  <header class="mx-auto flex max-w-5xl items-center justify-between px-6 pt-6">
-    <a href="/" class="flex min-h-11 items-center gap-2.5 font-semibold">
-      <img src="/icon.png" alt="" width="28" height="28" class="size-7">
-      Overfold
-    </a>
-    <a href="https://github.com/howells/overfold" class="flex min-h-11 items-center px-1 text-white/60 transition-colors hover:text-white">Source on GitHub</a>
-  </header>
-
-  <main class="mx-auto max-w-5xl px-6">
-    <section class="pt-20 pb-14 text-center sm:pt-28">
-      <h1 class="mx-auto max-w-2xl font-display text-display-sm font-semibold text-balance sm:text-display">A quieter menu bar.</h1>
-      <p class="mx-auto mt-5 max-w-md text-lead text-pretty text-white/65">Overfold hides the menu bar icons you don't need, and brings them back with a click.</p>
-      <div class="mt-9 flex flex-col items-center gap-3">
-        <a href="https://github.com/howells/overfold/releases/download/v1.0/Overfold-1.0.dmg"
-           class="inline-flex min-h-12 items-center gap-2.5 rounded-control bg-white px-6 font-semibold text-ink shadow-[0_1px_0_rgb(255_255_255/.4)_inset,0_8px_30px_-8px_rgb(255_255_255/.35)] transition hover:bg-white/90 active:scale-[.98] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mac-blue">
-          <svg class="size-[18px] fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round]" aria-hidden="true"><use href="#i-download"/></svg>
-          Download for Mac
-        </a>
-        <p class="text-small text-white/45">Version 1.0 · macOS 14 or later · Apple silicon and Intel</p>
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <header>
+      <div class="flex min-h-11 items-center justify-between gap-4 border-b border-ink/25 font-sans text-small text-ink/70">
+        <p>Version 1.0 · October 2026</p>
+        <p class="hidden sm:block">A menu bar app for macOS</p>
+        <a href="https://github.com/howells/overfold" class="flex min-h-11 items-center underline decoration-ink/25 underline-offset-4 transition-colors hover:text-ink">Source on GitHub</a>
       </div>
-    </section>
+      <h1 class="pt-4 pb-1 text-center text-nameplate font-medium [font-variation-settings:'opsz'_72] sm:pt-6 sm:pb-2">Overfold</h1>
+      <div class="h-[5px] border-y border-ink"></div>
+    </header>
 
-    <section aria-label="Try it">
-      <div class="wallpaper relative overflow-hidden rounded-screen shadow-[0_0_0_1px_rgb(255_255_255/.08),0_40px_120px_-30px_rgb(209_71_126/.45)]">
-        <div data-bar data-reveal="none"
-             class="flex h-[34px] items-center gap-4 bg-black/20 pr-2 pl-4 text-bar font-medium text-white backdrop-blur-xl [&_.ico]:size-4 [&_.ico]:fill-none [&_.ico]:stroke-current [&_.ico]:[stroke-width:1.9] [&_.ico]:[stroke-linecap:round] [&_.ico]:[stroke-linejoin:round]">
-          <nav aria-hidden="true" class="hidden shrink-0 gap-5 md:flex">
-            <span class="font-bold">Finder</span><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span>Help</span>
-          </nav>
+    <main>
+      <section class="grid gap-8 pt-10 pb-10 md:grid-cols-12 md:items-end md:gap-10 md:pt-14">
+        <div class="md:col-span-8">
+          <h2 class="text-headline font-medium text-balance [font-variation-settings:'opsz'_60]">A quieter menu bar.</h2>
+          <p class="mt-4 max-w-xl text-lead text-pretty text-ink/70 italic">Overfold hides the menu bar icons you don't need, and brings them back with a click.</p>
+        </div>
+        <div class="flex flex-col items-start gap-3 md:col-span-4 md:items-end">
+          <a href="https://github.com/howells/overfold/releases/download/v1.0/Overfold-1.0.dmg"
+             class="inline-flex min-h-12 items-center gap-2.5 rounded-control bg-ink px-5 font-sans text-[0.9375rem] font-semibold text-paper transition hover:bg-ink/85 active:scale-[.98] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-riso">
+            <svg class="size-[18px] fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round]" aria-hidden="true"><use href="#i-download"/></svg>
+            Download for Mac
+          </a>
+          <p class="font-sans text-small text-ink/60 md:text-right">Free. macOS 14 or later, Apple silicon and Intel.</p>
+        </div>
+      </section>
 
-          <div class="flex min-w-0 flex-1 items-center justify-end overflow-hidden">
-            <div data-fold="always" class="fold shrink-0">
-              <div class="flex items-center" aria-label="Icons kept out of sight">
-                <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="OneDrive"><use href="#i-cloud"/></svg></span>
-                <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Google Drive"><use href="#i-triangle"/></svg></span>
-                <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="SentinelOne"><use href="#i-shield"/></svg></span>
-                <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Ollama"><use href="#i-cpu"/></svg></span>
-                <span class="line bg-mac-blue"></span>
+      <figure>
+        <div class="relative h-56 overflow-hidden bg-paper ring-1 ring-ink/80 sm:h-72 md:h-[22rem]">
+          <div class="plate-ink" aria-hidden="true">
+            <div class="halftone"></div>
+            <div class="plate-tint"></div>
+          </div>
+
+          <div data-bar data-reveal="none"
+               class="relative flex h-[34px] items-center gap-4 bg-paper/75 pr-2 pl-4 font-sans text-small font-medium text-ink shadow-[0_1px_0_rgb(27_24_19/.12)] backdrop-blur-xl [&_.ico]:size-4 [&_.ico]:fill-none [&_.ico]:stroke-current [&_.ico]:[stroke-width:1.9] [&_.ico]:[stroke-linecap:round] [&_.ico]:[stroke-linejoin:round]">
+            <nav aria-hidden="true" class="hidden shrink-0 gap-5 md:flex">
+              <span class="font-bold">Finder</span><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span>Help</span>
+            </nav>
+
+            <div class="flex min-w-0 flex-1 items-center justify-end overflow-hidden">
+              <div data-fold="always" class="fold shrink-0">
+                <div class="flex items-center" aria-label="Icons kept out of sight">
+                  <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="OneDrive"><use href="#i-cloud"/></svg></span>
+                  <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Google Drive"><use href="#i-triangle"/></svg></span>
+                  <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="SentinelOne"><use href="#i-shield"/></svg></span>
+                  <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Ollama"><use href="#i-cpu"/></svg></span>
+                  <span class="line bg-mac-blue"></span>
+                </div>
               </div>
-            </div>
-            <div data-fold="hidden" class="fold shrink-0">
-              <div class="flex items-center" aria-label="Icons shown on click">
-                <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Amphetamine"><use href="#i-coffee"/></svg></span>
-                <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Granola"><use href="#i-notebook"/></svg></span>
-                <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Wispr Flow"><use href="#i-mic"/></svg></span>
-                <span class="line grey-line bg-white/45"></span>
+              <div data-fold="hidden" class="fold shrink-0">
+                <div class="flex items-center" aria-label="Icons shown on click">
+                  <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Amphetamine"><use href="#i-coffee"/></svg></span>
+                  <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Granola"><use href="#i-notebook"/></svg></span>
+                  <span class="grid w-7 place-items-center sm:w-8"><svg class="ico" aria-label="Wispr Flow"><use href="#i-mic"/></svg></span>
+                  <span class="line bg-ink/40"></span>
+                </div>
               </div>
+
+              <button type="button" data-arrow aria-expanded="false" aria-label="Show hidden icons" title="Click to show, ⌥-click for everything"
+                      class="relative grid h-[26px] w-8 shrink-0 place-items-center rounded-md transition-colors hover:bg-ink/10 aria-expanded:bg-ink/10 focus-visible:outline-2 focus-visible:outline-riso before:absolute before:-inset-x-1.5 before:-inset-y-[9px]">
+                <svg class="ico"><use data-arrow-icon href="#i-chevron-left"/></svg>
+              </button>
+
+              <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Tearsheet"><use href="#i-crop"/></svg></span>
+              <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Tailscale"><use href="#i-grid"/></svg></span>
+              <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Twingate"><use href="#i-key"/></svg></span>
+              <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Wi-Fi"><use href="#i-wifi"/></svg></span>
+              <span class="grid w-8 shrink-0 place-items-center sm:w-9"><svg class="ico !w-5" aria-label="Battery"><use href="#i-battery"/></svg></span>
+              <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Control Centre"><use href="#i-control"/></svg></span>
+              <time data-clock class="shrink-0 pr-1.5 pl-2 tabular-nums"></time>
             </div>
-
-            <button type="button" data-arrow aria-expanded="false" aria-label="Show hidden icons" title="Click to show, ⌥-click for everything"
-                    class="relative grid h-[26px] w-8 shrink-0 place-items-center rounded-md transition-colors hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-white before:absolute before:-inset-x-1.5 before:-inset-y-[9px]">
-              <svg class="ico"><use data-arrow-icon href="#i-chevron-left"/></svg>
-            </button>
-
-            <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Tearsheet"><use href="#i-crop"/></svg></span>
-            <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Tailscale"><use href="#i-grid"/></svg></span>
-            <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Twingate"><use href="#i-key"/></svg></span>
-            <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Wi-Fi"><use href="#i-wifi"/></svg></span>
-            <span class="grid w-8 shrink-0 place-items-center sm:w-9"><svg class="ico !w-5" aria-label="Battery"><use href="#i-battery"/></svg></span>
-            <span class="grid w-7 shrink-0 place-items-center sm:w-8"><svg class="ico" aria-label="Control Centre"><use href="#i-control"/></svg></span>
-            <time data-clock class="shrink-0 pl-2 pr-1.5 tabular-nums"></time>
           </div>
         </div>
 
-        <div class="grid aspect-[16/9] place-items-center sm:aspect-[16/7]">
-          <div role="group" aria-label="Menu bar state" class="flex rounded-control bg-black/25 p-1 text-small font-medium backdrop-blur-xl">
-            <button type="button" data-set="none" class="min-h-11 rounded-[8px] px-4 text-white/70 transition aria-pressed:bg-white/20 aria-pressed:text-white hover:text-white">Tidy</button>
-            <button type="button" data-set="hidden" class="min-h-11 rounded-[8px] px-4 text-white/70 transition aria-pressed:bg-white/20 aria-pressed:text-white hover:text-white">Click</button>
-            <button type="button" data-set="everything" class="min-h-11 rounded-[8px] px-4 text-white/70 transition aria-pressed:bg-white/20 aria-pressed:text-white hover:text-white">⌥-click</button>
+        <figcaption class="flex flex-col gap-3 border-b border-ink/25 py-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-ink/70 italic">Fig. 1. Your menu bar, tidied. Click the arrow to bring the rest back.</p>
+          <div role="group" aria-label="Menu bar state" class="flex shrink-0 self-start rounded-[9px] border border-ink/20 p-[3px] font-sans text-small font-medium sm:self-auto">
+            <button type="button" data-set="none" class="min-h-11 rounded-control px-4 text-ink/60 transition hover:text-ink aria-pressed:bg-ink aria-pressed:text-paper">Tidy</button>
+            <button type="button" data-set="hidden" class="min-h-11 rounded-control px-4 text-ink/60 transition hover:text-ink aria-pressed:bg-ink aria-pressed:text-paper">Click</button>
+            <button type="button" data-set="everything" class="min-h-11 rounded-control px-4 text-ink/60 transition hover:text-ink aria-pressed:bg-ink aria-pressed:text-paper">⌥-click</button>
           </div>
-        </div>
+        </figcaption>
+      </figure>
+    </main>
+  </div>
+
+  <div class="crease mt-14" aria-hidden="true"></div>
+
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <section class="grid gap-y-8 pt-8 pb-16 md:grid-cols-3 md:divide-x md:divide-ink/25">
+      <div class="md:pr-8">
+        <h2 class="flex items-center gap-3 text-lead font-semibold"><span class="h-5 w-0.5 rounded-full bg-ink/40" aria-hidden="true"></span>Always shown</h2>
+        <p class="mt-2 text-pretty text-ink/75">Right of the grey line. Wi-Fi, battery, the clock, and anything you glance at all day.</p>
+      </div>
+      <div class="border-t border-ink/25 pt-8 md:border-t-0 md:px-8 md:pt-0">
+        <h2 class="flex items-center gap-3 text-lead font-semibold"><span class="h-5 w-0.5 rounded-full bg-ink/40" aria-hidden="true"></span><span class="-ml-1.5 h-5 w-0.5 rounded-full bg-mac-blue" aria-hidden="true"></span>Shown on click</h2>
+        <p class="mt-2 text-pretty text-ink/75">Between the lines. Click the arrow or press ⌃⌥O. They tuck away when you click elsewhere, or after 15 seconds, but never while a menu is open.</p>
+      </div>
+      <div class="border-t border-ink/25 pt-8 md:border-t-0 md:pt-0 md:pl-8">
+        <h2 class="flex items-center gap-3 text-lead font-semibold"><span class="h-5 w-0.5 rounded-full bg-mac-blue" aria-hidden="true"></span>Kept out of sight</h2>
+        <p class="mt-2 text-pretty text-ink/75">Left of the blue line. Sync clients and agents that never need you. ⌥-click the arrow to reach them.</p>
       </div>
     </section>
 
-    <section class="grid gap-10 py-24 sm:grid-cols-3 sm:gap-8">
-      <div>
-        <div class="flex h-6 items-center gap-2" aria-hidden="true"><span class="h-4 w-0.5 rounded-full bg-white/45"></span><span class="h-px flex-1 bg-gradient-to-r from-white/25 to-transparent"></span></div>
-        <h2 class="mt-4 font-semibold">Always shown</h2>
-        <p class="mt-1.5 text-white/55 text-pretty">Right of the grey line. Wi-Fi, battery, the clock, and anything you glance at all day.</p>
-      </div>
-      <div>
-        <div class="flex h-6 items-center gap-2" aria-hidden="true"><span class="h-4 w-0.5 rounded-full bg-white/45"></span><span class="h-px flex-1 bg-gradient-to-r from-white/25 to-transparent"></span><span class="h-4 w-0.5 rounded-full bg-mac-blue"></span></div>
-        <h2 class="mt-4 font-semibold">Shown on click</h2>
-        <p class="mt-1.5 text-white/55 text-pretty">Between the lines. Click the arrow or press ⌃⌥O. They tuck away when you click elsewhere, or after 15 seconds, but never while a menu is open.</p>
-      </div>
-      <div>
-        <div class="flex h-6 items-center gap-2" aria-hidden="true"><span class="h-px flex-1 bg-gradient-to-l from-mac-blue/60 to-transparent"></span><span class="h-4 w-0.5 rounded-full bg-mac-blue"></span></div>
-        <h2 class="mt-4 font-semibold">Kept out of sight</h2>
-        <p class="mt-1.5 text-white/55 text-pretty">Left of the blue line. Sync clients and agents that never need you. ⌥-click the arrow to reach them.</p>
-      </div>
+    <section class="border-y border-ink py-12 text-center sm:py-16">
+      <p class="mx-auto max-w-3xl text-headline font-medium text-balance italic [font-variation-settings:'opsz'_60]">“Hold ⌘ and drag. That's the setup.”</p>
+      <p class="mx-auto mt-5 max-w-md text-pretty text-ink/70">No settings window, no permissions, nothing to subscribe to. One tiny app that starts at login and stays out of the way.</p>
     </section>
 
-    <section class="border-t border-white/10 py-16 text-center">
-      <h2 class="font-display text-title font-semibold text-balance">Hold ⌘ and drag. That's the setup.</h2>
-      <p class="mx-auto mt-3 max-w-md text-white/55 text-pretty">No settings window, no permissions, nothing to subscribe to. Overfold is one tiny app that starts at login and stays out of the way.</p>
-    </section>
-  </main>
-
-  <footer class="mx-auto max-w-5xl px-6 text-small text-white/45">
-    <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-white/10 py-8">
-    <p>Free and open source under the MIT licence.</p>
-    <p>Made by <a href="https://danielhowells.com" class="text-white/70 underline decoration-white/25 underline-offset-4 transition-colors hover:text-white">Daniel Howells</a></p>
-    </div>
-  </footer>
+    <footer class="flex flex-col gap-2 py-8 font-sans text-small text-ink/60 sm:flex-row sm:justify-between">
+      <p>Set in Newsreader and San Francisco. Free and open source under the MIT licence.</p>
+      <p>Made by <a href="https://danielhowells.com" class="text-ink underline decoration-ink/30 underline-offset-4 transition-colors hover:decoration-ink">Daniel Howells</a></p>
+    </footer>
+  </div>
 
   <script>
     const bar = document.querySelector("[data-bar]");
